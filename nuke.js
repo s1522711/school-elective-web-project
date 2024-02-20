@@ -18,6 +18,6 @@ const playExplosion = async () => {
     document.body.style.display = "initial";
     document.body.style.display = "none";
     await delay(3000);
-    document.body.style.display = "initial";
+    document.body.style.display = "initial"; // Show the body again
 }
 
