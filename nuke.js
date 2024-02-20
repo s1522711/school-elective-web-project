@@ -13,7 +13,11 @@ const disableCloseButton = async () => {
 const playExplosion = async () => {
     var audio = new Audio('/mp3/explosion.mp3');
     audio.play();
-    var nukeModal = new bootstrap.Modal(document.getElementById('explosionModal'), options)
+    var nukeModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('explosionModal'));
     nukeModal.hide();
+    document.body.style.display = "initial";
+    document.body.style.display = "none";
+    await delay(3000);
+    document.body.style.display = "initial";
 }
 
